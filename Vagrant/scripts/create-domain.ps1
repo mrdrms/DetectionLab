@@ -21,7 +21,7 @@ if ((gwmi win32_computersystem).partofdomain -eq $false) {
 
   # Set administrator password
   $computerName = $env:COMPUTERNAME
-  $adminPassword = "vagrant"
+  $adminPassword = "myTempPassword123!"
   $adminUser = [ADSI] "WinNT://$computerName/Administrator,User"
   $adminUser.SetPassword($adminPassword)
 
